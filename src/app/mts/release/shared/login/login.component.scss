@@ -1,0 +1,44 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+
+    height: 5000px;
+    /* Make this site really long */
+    width: 5000px;
+    /* Make this site really wide */
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+
+
+  html {
+    height: 100%;
+  }
+
+  .bg {
+    /* The image used */
+    background-image: url("../../../../../assets/images/NCCPL\ Logo\ \(original\)\ -\ white\ footer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Full height
+    max-height: auto;
+    max-width: auto;
+    /* Center and scale the image nicely */
+
+    background-size: cover;
+  }
+
+  .mts-text {
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-bottom: -15%;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif
+  }
+
+  .heading {
+    font-family:Times New Roman, Times, serif; color:  darkblue; font-weight: bolder;
+  }
+  .mtsText{
+    letter-spacing: 1px; font-family:Times New Roman, Times, serif; color:  darkblue; margin-left: 5%;
+  }

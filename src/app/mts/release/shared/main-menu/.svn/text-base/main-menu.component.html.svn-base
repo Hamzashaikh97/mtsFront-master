@@ -1,0 +1,200 @@
+<body *ngIf="loginUser">
+
+  <header *ngIf="loginUser">
+<app-nav-bar></app-nav-bar>
+
+  </header>
+  <div class="" *ngIf="!report"
+    style=" background-color: red; background-image: linear-gradient(rgb(200, 200, 240), white); height: 580px; ">
+    <div class="row">
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4"></div>
+
+    </div>
+
+
+  </div>
+
+  <div class="container-fluid " *ngIf="report"
+    style=" background-color: red; background-image: linear-gradient(rgb(200, 200, 240), white);  height: 550px; background-image:'../../assets/images/nccpl logo.png';">
+    <div class="row " style="height: 10%;">
+
+    </div>
+    <div class="row " style="margin-left: 20%;">
+      <div class="">
+        <div class="form-group fw-bold">
+          <label style="letter-spacing: 1px; font-family:Times New Roman, Times, serif; color:  darkblue;">CM ID</label>
+          <input type="text" [(ngModel)]="this.cmId" class="form-control" id="cmId" placeholder="1234" required>
+        </div>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="">
+        <div class="form-group">
+          <label style="letter-spacing: 1px; font-family:Times New Roman, Times, serif; color:  darkblue;">CM
+            NAME</label>
+          <input type="email" [(ngModel)]="this.cmName" class="form-control" id="cmName" placeholder="CM Name" required>
+        </div>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="">
+        <div class="form-group">
+          <label
+            style="letter-spacing: 1px; font-family:Times New Roman, Times, serif; color:  darkblue;">SYMBOL</label>
+          <input type="text" [(ngModel)]="this.symbol" class="form-control" id="symbol" placeholder="symbol" required>
+        </div>
+      </div>
+    </div>
+    <div class="row " style="margin-left: 20%;">
+      <div class="">
+        <div class="form-group">
+          <label
+            style="letter-spacing: 1px; font-family:Times New Roman, Times, serif; color:  darkblue;">MARGIN</label>
+          <input type="text" [(ngModel)]="this.margin" class="form-control" id="margin" placeholder="margin" required>
+        </div>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="">
+        <div class="form-group ">
+          <label
+            style="letter-spacing: 1px; font-family:Times New Roman, Times, serif; color:  darkblue;">EXPOSURE</label>
+          <input type="text" [(ngModel)]="this.exposure" class="form-control" id="exposure" placeholder="exposure"
+            required>
+        </div>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="">
+        <div class="form-group">
+          <label style="letter-spacing: 1px; font-family:Times New Roman, Times, serif; color:  darkblue;">EXPOSURE
+            DEMAND</label>
+          <input type="text" [(ngModel)]="this.exposureDemand" class="form-control" id="exposure"
+            placeholder="exposure demand" required>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <div class="modal-footer " style="margin-right: 26%;">
+      <button type="button" id="add-employee-form" class="btn btn-secondary"
+        style="background-color:rgb(148, 148, 235) ; color: white;" data-dismiss="modal" >Close</button>
+      <button type="submit"  class="btn btn-primary"
+        style="background-color:darkblue ; color: white;">save record</button>
+    </div>
+
+
+    <!--     <button class="btn btn-primary"   type="submit">Submit</button>
+      <br>
+      <br>
+      <br>
+
+
+      <div class="row align-items-center">
+        <div class="col-lg-12 px-lg-4" >
+          <div class="card">
+            <div class="card-header px-lg-5">
+              <div class="card-heading text-primary text-primary"><h3>Test Margin Report</h3></div>
+            </div>
+            <div class="card-body p-lg-5">
+              <h3 class="mb-4">Enter Details</h3>
+              <form  id = "addForm"  (ngSubmit)="onAddEmployee()">
+                <div class="form-group">
+                   <label >CM ID</label>
+                   <input type="text"[(ngModel)]="this.cmId" class="form-control" id="cmId" placeholder="09272" required>
+                </div>
+                <div class="form-group">
+                   <label>CM NAME</label>
+                   <input type="email" [(ngModel)]="this.cmName" class="form-control" id="cmName" placeholder="CM Name" required>
+                </div>
+                <div class="form-group">
+                   <label >symbol</label>
+                   <input type="text" [(ngModel)]="this.symbol" class="form-control" id="symbol" placeholder="symbol" required>
+                </div>
+                <div class="form-group">
+                   <label >margin</label>
+                   <input type="text" [(ngModel)]="this.margin" class="form-control" id="margin" placeholder="margin" required>
+                </div>
+                <div class="form-group">
+                   <label >exposure</label>
+                   <input type="text" [(ngModel)]="this.exposure" class="form-control" id="exposure" placeholder="exposure" required>
+                </div>
+                <div class="form-group">
+                  <label >exposure demand</label>
+                  <input type="text" [(ngModel)]="this.exposureDemand" class="form-control" id="exposure" placeholder="exposure demand" required>
+               </div>
+                <div class="modal-footer">
+                   <button type="button" id="add-employee-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   <button type="submit" (click)="onAddEmployee()" class="btn btn-primary" >save record</button>
+                </div>-->
+    <!--   </form>-->
+    <!-- <div class="row">
+                  <div class="">
+                    <label for="floatingPassword">Name</label>
+
+                    <input class="form-control" id="floatingPassword" type="text" placeholder="name" required>
+                  </div>
+                  <div class="col-2">
+
+                  </div>
+                  <div class="">
+                    <label for="floatingPassword">Role</label>
+
+                    <input class="form-control" id="floatingPassword" type="text" placeholder="role" required>
+                </div>
+                <div class="col-2">
+
+                </div>
+                <div class="">
+                    <label for="floatingPassword">Department</label>
+
+                    <input class="form-control" id="floatingPassword" type="text" placeholder="Department" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="">
+                  <label for="floatingPassword">Reason</label>
+
+                  <input class="form-control" id="floatingPassword" type="text" placeholder="Reason" required>
+                </div>
+                <div class="col-2">
+
+                </div>
+                <div class="">
+                  <label for="floatingPassword">Amount</label>
+
+                  <input class="form-control" id="floatingPassword" type="text" placeholder="Amount" required>
+              </div>
+              <div class="col-2">
+
+              </div>
+              <div class="">
+                  <label for="floatingPassword">City</label>
+
+                  <input class="form-control" id="floatingPassword" type="text" placeholder="City" required>
+              </div>
+            </div>
+                <br>
+                <button class="btn btn-primary"   type="submit">Submit</button> -->
+    <!--              </form>             </div>
+ -->
+
+  </div>
+
+</body>
+
+<div class="card-footer px-lg-5 py-lg-4">
+
+  <div class="text-sm text-muted">privacy policy nccpl pakistan</div>
+</div>

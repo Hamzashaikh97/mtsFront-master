@@ -1,0 +1,182 @@
+<!-- <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(29, 29, 83);">
+    <div class="container-fluid mb-0 mt-0">
+        <span class="navbar-brand" href="#">
+            <div class="col-md-7 col-lg-5 d-none d-md-block ml-5 ">
+                <img href="#" src="../../../../../assets/images/NCCPL Logo (original) - white footer.png"
+                    alt="nccpl-logo" class="img-fluid" style="border-radius: 0 0 0 0; height: 37px; width: 80px;" />
+            </div>
+        </span>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle btn-sm" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        PROCESS
+                    </span>
+                    <div class="dropdown-menu btn-sm" aria-labelledby="navbarDropdownMenuLink"
+                        style="background-color: rgb(196, 196, 245)">
+                <li class="nav-item dropdown" *ngFor="let menue of menueItems">
+                    <span class="dropdown-item" href="#" *ngIf="menue.menuParentId=='1'">{{menue.menuDesc}}</span>
+
+                </li>
+
+        </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+            <span class="nav-link dropdown-toggle btn-sm" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                REPORTS
+            </span>
+            <div class="dropdown-menu btn-sm" aria-labelledby="navbarDropdownMenuLink"
+                style="background-color: #c4c4f5">
+        <li class="nav-item dropdown" *ngFor="let menue of menueItems">
+
+            <span class="dropdown-item" href="#" *ngIf="menue.menuParentId=='2'" (click)="redirect()">{{menue.menuDesc}} </span>
+
+
+        </li>
+    </div>
+    </li>
+
+    <li class="nav-item dropdown">
+        <span class="nav-link dropdown-toggle btn-sm" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            DOWNLOADS
+        </span>
+        <div class="dropdown-menu btn-sm" aria-labelledby="navbarDropdownMenuLink"
+            style="background-color: rgb(196, 196, 245)">
+    <li class="nav-item dropdown" *ngFor="let menue of menueItems">
+        <span class="dropdown-item" *ngIf="menue.menuParentId=='3'" href="#">{{menue.menuDesc}}</span>
+    </li>
+    </div>
+    </li>
+
+    <li class="nav-item dropdown">
+        <span class="nav-link dropdown-toggle btn-sm" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SECURITY
+        </span>
+        <div class="dropdown-menu btn-sm" aria-labelledby="navbarDropdownMenuLink"
+            style="background-color: rgb(196, 196, 245)">
+    <li class="nav-item dropdown" *ngFor="let menue of menueItems">
+
+        <span class="dropdown-item" href="#" *ngIf="menue.menuParentId=='4'">{{menue.menuDesc}}</span>
+    </li>
+
+    </div>
+    </li>
+
+    <li class="nav-item dropdown">
+        <span class="nav-link dropdown-toggle btn-sm" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            EXIT
+        </span>
+        <div class="dropdown-menu btn-sm" aria-labelledby="navbarDropdownMenuLink"
+            style="background-color: rgb(196, 196, 245)">
+    <li class="nav-item dropdown" *ngFor="let menue of menueItems">
+
+        <span class="dropdown-item" href="#" *ngIf="menue.menuParentId=='5'">{{menue.menuDesc}}</span>
+    </li>
+    </div>
+    </li>
+    </ul>
+
+    </div>
+    </div>
+</nav> -->
+
+
+<!-- //local -->
+
+<nav class="navbar navbar-expand-sm navbar-dark 
+
+" style="background-color: rgb(29, 29, 83); ">
+  <div class="container-fluid mb-0 mt-0">
+    <span class="navbar-brand" href="#">
+      <div class="col-md-7 col-lg-5 d-none d-md-block ml-5 ">
+        <img href="#" src="../../assets/images/NCCPL Logo (original) - white footer.png" alt="nccpl-logo"
+          class="img-fluid" style="border-radius: 0 0 0 0; height: 37px; width: 80px;" />
+      </div>
+    </span>
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>PROCESS</a>
+          <div ngbDropdownMenu style="background-color: rgb(196, 196, 245); ">
+            <button ngbDropdownItem (click)="gotoMTSReleaseScreen()">MTS Release</button>
+            <button ngbDropdownItem>Cash Release UIN Wise</button>
+            <button ngbDropdownItem (click)="gotodepositerelasescreen()">Deposite Release Request</button>
+            <button ngbDropdownItem (click)="gotodepositeRelaseScreenTier2()">Deposite Release Request Throw Symbol</button>
+          </div>
+        </li>
+
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>REPORTS</a>
+          <div ngbDropdownMenu style="background-color: rgb(196, 196, 245)">
+
+            <button ngbDropdownItem (click)="exposuredemandReport()">Exposure Demand Notice</button>
+            <button ngbDropdownItem>MTS Release </button>
+            <button ngbDropdownItem>MTS UnRelease</button>
+            <button ngbDropdownItem>Profit/Loss</button>
+            <button ngbDropdownItem>Financier Brief</button>
+            <button ngbDropdownItem>Financee Brief</button>
+            <button ngbDropdownItem>Buy Statement</button>
+            <button ngbDropdownItem>Sell Statement</button>
+            <button ngbDropdownItem>UIN net Demand</button>
+            <button ngbDropdownItem>NBAF Defined Brokers</button>
+            <button ngbDropdownItem>Cash Release Requests</button>
+            <button ngbDropdownItem>Cash Allocation/Balance Report</button>
+            <button ngbDropdownItem>Pledged Release Request </button>
+            <button ngbDropdownItem (click)="concentrationMarginReport()">Concentration Margin
+              Financier</button>
+            <button ngbDropdownItem>Pledge by UIN</button>
+            <button ngbDropdownItem>MTM Profit</button>
+            <button ngbDropdownItem>MTM Loss</button>
+          </div>
+        </li>
+
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>DOWNLOADS</a>
+          <div ngbDropdownMenu style="background-color: rgb(196, 196, 245)">
+            <button ngbDropdownItem>MTS Release</button>
+            <button ngbDropdownItem>MTS Un-Release</button>
+            <button ngbDropdownItem>Trade Log</button>
+            <button ngbDropdownItem>Trade Log 1</button>
+            <button ngbDropdownItem>Open Market MTS</button>
+            <button ngbDropdownItem>Recalculated Open MTS</button>
+          </div>
+        </li>
+
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>SECURITY</a>
+          <div ngbDropdownMenu style="background-color: rgb(196, 196, 245)">
+            <button ngbDropdownItem>Change Password</button>
+          </div>
+        </li>
+
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>LOGOUT</a>
+          <div ngbDropdownMenu style="background-color: rgb(196, 196, 245)">
+            <button ngbDropdownItem>YES</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

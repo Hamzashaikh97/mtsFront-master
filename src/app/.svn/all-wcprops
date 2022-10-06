@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/NCSSDev/!svn/ver/53327/DEV/MTS/Baseline/MTS%20Revamp/webapp/src/app
+END
+app.component.spec.ts
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/NCSSDev/!svn/ver/53327/DEV/MTS/Baseline/MTS%20Revamp/webapp/src/app/app.component.spec.ts
+END
+app.component.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/NCSSDev/!svn/ver/53335/DEV/MTS/Baseline/MTS%20Revamp/webapp/src/app/app.component.html
+END
+app.component.ts
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/NCSSDev/!svn/ver/53327/DEV/MTS/Baseline/MTS%20Revamp/webapp/src/app/app.component.ts
+END
+app.module.ts
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/NCSSDev/!svn/ver/53335/DEV/MTS/Baseline/MTS%20Revamp/webapp/src/app/app.module.ts
+END
+app.component.scss
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/NCSSDev/!svn/ver/53327/DEV/MTS/Baseline/MTS%20Revamp/webapp/src/app/app.component.scss
+END
+app-routing.module.ts
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/NCSSDev/!svn/ver/53335/DEV/MTS/Baseline/MTS%20Revamp/webapp/src/app/app-routing.module.ts
+END

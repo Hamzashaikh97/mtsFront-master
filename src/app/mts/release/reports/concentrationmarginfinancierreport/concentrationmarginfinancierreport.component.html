@@ -1,0 +1,149 @@
+
+
+<body>
+  <div class="container" id="pdfTable" #pdfTable>
+    <div style="text-align: center;">
+      <h2>National Clearing Company Of Pakistan Limited</h2>
+      <h4>Concentration Margin For Financier</h4>
+      <h4>Member/Market/UIN Wise-MTS</h4>
+    </div>
+
+    <div style="text-align: right;">
+      <p><span><b>Page:</b></span><span>&nbsp;&nbsp;1&nbsp;&nbsp;of&nbsp;&nbsp;1</span></p>
+      <p><span><b>Printing Date</b></span><span>&nbsp;&nbsp;06-SEP-2022</span></p>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <p><b>From Date:</b>22-SEP-22</p>
+      </div>
+      <div class="col-4">
+        <p><b>To Date:</b>30-SEP-22</p>
+      </div>
+      <div class="col-4" style="text-align: right;">
+        <p><span><b>Time</b></span><span>&nbsp;&nbsp;14:25:55</span></p>
+      </div>
+    </div>
+    <div class="container">
+      
+      <div   class="">
+
+        <form>
+          <div class="form-group form-inline">
+              Full text search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+              <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
+          </div>
+        
+          <table id="excel-table" class="table table-striped table-bordered table-sm row-border hover table-responsive">
+            <thead>
+            <tr>
+              <th sortable="MemberCode" (sort)="onSort($event)">Member Code</th>
+              <th sortable="MemberName" (sort)="onSort($event)">Member Name</th>
+              <th sortable="Date" (sort)="onSort($event)">Date</th>
+              <th sortable="Symbol" (sort)="onSort($event)">Symbol</th>
+              <th sortable="UIN" (sort)="onSort($event)">UIN</th>
+              <th sortable="MarketMargin" (sort)="onSort($event)">Market Margin</th>
+              <th sortable="MemberMargin" (sort)="onSort($event)">Member Margin</th>
+              <th sortable="UINMargin" (sort)="onSort($event)">UIN Margin</th>
+              <th sortable="TotalMargin" (sort)="onSort($event)">Total Margin</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let ConcentrationMarginData of ConcentrationMarginData$ | async">
+              <!-- <th scope="row">{{ ConcentrationMarginData.id }}</th> -->
+              <td>
+                <ngb-highlight [result]="ConcentrationMarginData.MemberCode " [term]="service.searchTerm"></ngb-highlight>
+              </td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.MemberName" [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.Date  "></ngb-highlight></td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.Symbol  " [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.UIN  " [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.MarketMargin " [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.MemberMargin" [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.UINMargin  " [term]="service.searchTerm"></ngb-highlight></td>
+              <td><ngb-highlight [result]="ConcentrationMarginData.TotalMargin  " [term]="service.searchTerm"></ngb-highlight></td>
+            </tr>
+            </tbody>
+          </table>
+        
+          <div class="d-flex justify-content-between p-2">
+            <!-- <ngb-pagination
+              [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
+            </ngb-pagination> -->
+<!--         
+            <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+              <option [ngValue]="2">2 items per page</option>
+              <option [ngValue]="4">4 items per page</option>
+              <option [ngValue]="6">6 items per page</option>
+              <option [ngValue]="8">8 items per page</option>
+
+            </select> -->
+          </div>
+        
+        </form>
+
+<!--         
+        <table  id="excel-table" class="table table-striped table-bordered table-sm row-border hover table-responsive"  datatable >
+          <thead class="table-primary">
+            <tr>
+              <th sortable="MemberCode" (sort)="onSort($event)">Member Code</th>
+              <th sortable="MemberName" (sort)="onSort($event)">Member Name</th>
+              <th sortable="Date" (sort)="onSort($event)">Date</th>
+              <th sortable="Symbol" (sort)="onSort($event)">Symbol</th>
+              <th sortable="UIN" (sort)="onSort($event)">UIN</th>
+              <th sortable="MarketMargin" (sort)="onSort($event)">Market Margin</th>
+              <th sortable="MemberMargin" (sort)="onSort($event)">Member Margin</th>
+              <th sortable="UINMargin" (sort)="onSort($event)">UIN Margin</th>
+              <th sortable="TotalMargin" (sort)="onSort($event)">Total Margin</th>
+             
+        
+            </tr>
+          </thead>
+          <tbody>
+           <tr *ngFor="let group of data">
+                 <td>{{group.MemberCode}}</td>
+                 <td>{{group.MemberName}}</td>
+                 <td>{{group.Date}}</td>
+                 <td>{{group.Symbol}}</td>
+                 <td>{{group.UIN}}</td>
+                 <td>{{group.MarketMargin}}</td>
+                 <td>{{group.MemberMargin}}</td>
+                 <td>{{group.UINMargin}}</td>
+                 <td>{{group.TotalMargin}}</td>
+                
+             </tr>
+          </tbody>
+        </table> -->
+
+
+
+
+        <div style="text-align: center;"><b>End of Report</b> </div>
+        
+
+
+    </div>
+  
+  </div>
+
+
+<div class="row">
+  <div class=" col-8" >
+    <button class="btn btn-primary    "  (click)="downloadAsPDF();">Export To PDF</button>
+  </div>
+
+  <div class="col-1" >
+    <button class="btn btn-primary    "  (click)="exportexcel();">Export to Excel</button>
+  </div>
+</div>
+  </div> 
+
+ 
+</body>
+
+
+
+
+
+
+
+

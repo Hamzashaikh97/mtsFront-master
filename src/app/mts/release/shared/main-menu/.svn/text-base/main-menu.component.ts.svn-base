@@ -1,0 +1,157 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
+import { MenuService } from '../../services/menu.service';
+
+
+@Component({
+  selector: 'app-main',
+  templateUrl: './main-menu.component.html',
+  styleUrls: ['./main-menu.component.scss']
+})
+export class MainMenuComponent implements OnInit {
+  loginUser : boolean  = true;
+  report : boolean = false ;
+  cmId ="";
+  cmName ="";
+  symbol="";
+  margin=0;
+  exposure=0;
+  exposureDemand=0;
+   basicReport: any={
+    cmId : "",
+    cmName: "",
+    symbol: "",
+    margin: "",
+    exposure: ""
+   };
+
+    menueItems:any=
+    {
+        menuId: "" ,
+        menuDesc: "",
+        menuParentId: "",
+        menuVal:""
+    }
+ 
+
+   menues : any =Object;
+
+
+   
+  
+
+  constructor(private router: Router, private menuService: MenuService ) { 
+    this.loginUser=true;
+  }
+
+  ngOnInit(): void {
+    this.Menu();
+
+    console.log("in ngonit");
+   
+
+    console.log(this.menueItems);
+    console.log("in ngonit 03");
+
+    console.log(this.menues);
+
+
+  }
+
+  Menu()
+  {
+    this.menuService.doLogin("C").subscribe(
+      (response: any[]) => {
+        //debugger
+        console.log(response+" res");
+        this.menues=response;
+        this.menueItems=this.menues;
+        console.log(this.menues);
+        
+        
+        console.log(this.menueItems[4].menuDesc);
+
+        let k = 0;
+  
+       
+        console.log("the menue items");
+        console.log(this.menueItems)
+      //  this. ParentMenu();
+      }
+      ,
+      (errorResponse: HttpErrorResponse) => {
+        console.log(errorResponse.message);
+        alert("Inavlid username or password");
+      }
+    )
+
+
+  }
+
+  ParentMenu()
+  {
+    for (let i=0; i<= this.menues.length ; i++)
+    {
+      
+        console.log (this.menues+" this is menu filtered ");
+      
+    }
+    
+  }
+  userlogin = true;
+  userregister = false;
+  //Buttons clicks functionalities 
+  user_register()
+  {
+    this.userlogin = false;
+    this.userregister = true;
+  }
+  user_login()
+  {
+    this.userlogin = true;
+    this.userregister = false;
+  }
+
+  
+  Report()
+    {
+      this.report = true;
+    }
+    // public onAddEmployee():void{
+
+    //   this.basicReport.cmId = this.cmId;
+    //   this.basicReport.cmName = this.cmName;
+    //   this.basicReport.margin = this.margin;
+    //   this.basicReport.exposure = this.exposure;
+    //   this.basicReport.symbol = this.symbol;
+    //   this.basicReport.exposureDemand = this.exposureDemand;
+    //   this.userservice.addEmployee(this.basicReport).subscribe(
+    //     (response: BasicReport) => {
+    //       console.log(response);
+    //       //this.router.navigate(['/user']);
+    //       alert("Record added successfully!");
+    //       this.cmId="";
+    //       this.cmName="";
+    //       this.exposure=0;
+    //       this.exposureDemand=0;
+    //       this.margin=0;
+    //       this.symbol="";
+
+    //     },
+    //     (errorResponse: HttpErrorResponse) => {
+    //       alert(errorResponse.message);
+    //     }
+    //   )
+    // }
+
+    gotoDemandPayment()
+    {
+      this.router.navigate(['/demandofpayment']);
+    }
+    Fecth(){
+      this.router.navigate(['/user']);
+    }
+  
+}
