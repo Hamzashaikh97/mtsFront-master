@@ -131,23 +131,23 @@
           <div ngbDropdownMenu style="background-color: rgb(196, 196, 245)">
 
             <button ngbDropdownItem (click)="exposuredemandReport()">Exposure Demand Notice</button>
-            <button ngbDropdownItem>MTS Release </button>
-            <button ngbDropdownItem>MTS UnRelease</button>
-            <button ngbDropdownItem>Profit/Loss</button>
-            <button ngbDropdownItem>Financier Brief</button>
-            <button ngbDropdownItem>Financee Brief</button>
-            <button ngbDropdownItem>Buy Statement</button>
-            <button ngbDropdownItem>Sell Statement</button>
-            <button ngbDropdownItem>UIN net Demand</button>
-            <button ngbDropdownItem>NBAF Defined Brokers</button>
-            <button ngbDropdownItem>Cash Release Requests</button>
-            <button ngbDropdownItem>Cash Allocation/Balance Report</button>
-            <button ngbDropdownItem>Pledged Release Request </button>
-            <button ngbDropdownItem (click)="concentrationMarginReport()">Concentration Margin
+            <button ngbDropdownItem (click)="MTSReleaseReport()">MTS Release </button>
+            <button ngbDropdownItem (click)="MTSunReleaseReport()">MTS UnRelease</button>
+            <button ngbDropdownItem (click)="profitLossReportScreen()">Profit/Loss</button>
+            <button ngbDropdownItem (click)="financierReportScreen()">Financier Brief</button>
+            <button ngbDropdownItem (click)="financeeReportScreen()">Financee Brief</button>
+            <button ngbDropdownItem  (click)="buyStatementReportScreen()"   >Buy Statement</button>
+            <button ngbDropdownItem  (click)=" sellStatementReportScreen() "  >Sell Statement</button>
+            <button ngbDropdownItem  (click)="UINnetDemandReportScreen()"  >UIN net Demand</button>
+            <button ngbDropdownItem  (click)="nbafReportScreen()"  >NBAF Defined Brokers</button>
+            <button ngbDropdownItem  (click)="  cashReleaseRequestReportScreen()"  >Cash Release Requests</button>
+            <button ngbDropdownItem  (click)="cashAllocationReportScreen()"  >Cash Allocation/Balance Report</button>
+            <button ngbDropdownItem  (click)="pledgeReleaseRequestReportScreen()"  >Pledged Release Request </button>
+            <button ngbDropdownItem  (click)="concentrationMarginReport()">Concentration Margin
               Financier</button>
-            <button ngbDropdownItem>Pledge by UIN</button>
-            <button ngbDropdownItem>MTM Profit</button>
-            <button ngbDropdownItem>MTM Loss</button>
+            <button ngbDropdownItem (click)=" pledgeByUinReportScreen()">Pledge by UIN</button>
+            <button ngbDropdownItem (click)="MTMprofitReportScreen()">MTM Profit</button>
+            <button ngbDropdownItem (click)="MTMlossReportScreen()">MTM Loss</button>
           </div>
         </li>
 

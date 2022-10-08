@@ -15,11 +15,6 @@ import {NgbdSortableHeader, SortEvent} from './sortable.directive';
 const htmlToPdfmake = require("html-to-pdfmake");
 (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
-
-
-
-
-
 @Component({
   selector: 'app-concentrationmarginfinancierreport',
   templateUrl: './concentrationmarginfinancierreport.component.html',

@@ -33,7 +33,7 @@
               <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
           </div>
         
-          <table id="excel-table" class="table table-striped table-bordered table-sm row-border hover table-responsive">
+          <table id="excel-table" class="table table-striped table-bordered table-sm row-border hover ">
             <thead>
             <tr>
               <th sortable="MemberCode" (sort)="onSort($event)">Member Code</th>
@@ -66,68 +66,26 @@
           </table>
         
           <div class="d-flex justify-content-between p-2">
-            <!-- <ngb-pagination
+            <ngb-pagination
               [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
-            </ngb-pagination> -->
-<!--         
+            </ngb-pagination> 
+        
             <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
               <option [ngValue]="2">2 items per page</option>
               <option [ngValue]="4">4 items per page</option>
               <option [ngValue]="6">6 items per page</option>
               <option [ngValue]="8">8 items per page</option>
 
-            </select> -->
+            </select> 
           </div>
         
         </form>
-
-<!--         
-        <table  id="excel-table" class="table table-striped table-bordered table-sm row-border hover table-responsive"  datatable >
-          <thead class="table-primary">
-            <tr>
-              <th sortable="MemberCode" (sort)="onSort($event)">Member Code</th>
-              <th sortable="MemberName" (sort)="onSort($event)">Member Name</th>
-              <th sortable="Date" (sort)="onSort($event)">Date</th>
-              <th sortable="Symbol" (sort)="onSort($event)">Symbol</th>
-              <th sortable="UIN" (sort)="onSort($event)">UIN</th>
-              <th sortable="MarketMargin" (sort)="onSort($event)">Market Margin</th>
-              <th sortable="MemberMargin" (sort)="onSort($event)">Member Margin</th>
-              <th sortable="UINMargin" (sort)="onSort($event)">UIN Margin</th>
-              <th sortable="TotalMargin" (sort)="onSort($event)">Total Margin</th>
-             
-        
-            </tr>
-          </thead>
-          <tbody>
-           <tr *ngFor="let group of data">
-                 <td>{{group.MemberCode}}</td>
-                 <td>{{group.MemberName}}</td>
-                 <td>{{group.Date}}</td>
-                 <td>{{group.Symbol}}</td>
-                 <td>{{group.UIN}}</td>
-                 <td>{{group.MarketMargin}}</td>
-                 <td>{{group.MemberMargin}}</td>
-                 <td>{{group.UINMargin}}</td>
-                 <td>{{group.TotalMargin}}</td>
-                
-             </tr>
-          </tbody>
-        </table> -->
-
-
-
-
         <div style="text-align: center;"><b>End of Report</b> </div>
-        
-
-
     </div>
-  
   </div>
 
-
 <div class="row">
-  <div class=" col-8" >
+  <div class=" col-10" >
     <button class="btn btn-primary    "  (click)="downloadAsPDF();">Export To PDF</button>
   </div>
 
@@ -136,8 +94,6 @@
   </div>
 </div>
   </div> 
-
- 
 </body>
 
 

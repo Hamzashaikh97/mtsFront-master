@@ -38,9 +38,24 @@ export class NavBarComponent implements OnInit {
    
   }
 
+  
+
+  profitLossReportScreen()
+  {
+    this.router.navigate(['/profit-loss-report-screen']);
+  }
+
   exposuredemandReport()
   {
     this.router.navigate(['/exposuredemand']);
+  }
+  MTSReleaseReport(){
+    this.router.navigate(['/mtsrelease-report-screen']);
+
+  }
+  MTSunReleaseReport(){
+    this.router.navigate(['/mtsunrelease-report-screen']);
+
   }
   
   concentrationMarginReport()
@@ -68,6 +83,63 @@ export class NavBarComponent implements OnInit {
   {
     this.router.navigate(['/mts-release-screen']);
   }
+
+  financierReportScreen()
+  {
+    this.router.navigate(['/financier-brief-report-screen']);
+  }
+
+  financeeReportScreen()
+  {
+    this.router.navigate(['/financee-brief-report-screen']);
+  }
+  buyStatementReportScreen()
+  {
+    this.router.navigate(['/buy-statement-report-screen']);
+  }
+
+  sellStatementReportScreen()
+  {
+    this.router.navigate(['/sell-statement-report-screen']);
+  }
+  UINnetDemandReportScreen()
+  {
+    this.router.navigate(['/uin-net-demand-report-screen']);
+  }
+ 
+  nbafReportScreen()
+  {
+    this.router.navigate(['/nbafreport-screen']);
+  }
+
+  cashReleaseRequestReportScreen()
+  {
+    this.router.navigate(['/cash-release-request-report-screen']);
+  }
+  cashAllocationReportScreen()
+  {
+    this.router.navigate(['/cashallocationbalance-request-report-screen']);
+  }
+
+  pledgeReleaseRequestReportScreen()
+  {
+    this.router.navigate(['/pledge-release-request-report-screen']);
+  }
+  pledgeByUinReportScreen()
+  {
+    this.router.navigate(['/pledge-by-uin-report-screen']);
+  }
+
+  MTMprofitReportScreen()
+  {
+    this.router.navigate(['/mtmprofit-report-screen']);
+  }
+  MTMlossReportScreen()
+  {
+    this.router.navigate(['/mtmloss-report-screen']);
+  }
+
+
   Menu() {
     this.menuService.doLogin("C").subscribe(
       (response: any[]) => {

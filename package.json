@@ -28,6 +28,8 @@
     "file-saver": "^2.0.5",
     "html-to-pdfmake": "^2.3.10",
     "jquery": "^3.2.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.25",
     "pdfmake": "^0.2.5",
     "popper.js": "^1.12.9",
     "rxjs": "~6.6.0",
